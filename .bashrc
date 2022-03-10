@@ -166,7 +166,7 @@ export PATH=~/Projects/Scripts/my-scripts:$PATH
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Set the FZF default configuration 
-export FZF_DEFAULT_OPTS="--bind=ctrl-j:accept --color=16 --reverse --no-info"
+export FZF_DEFAULT_OPTS="--bind=ctrl-j:accept --color='16,bg+:8,fg+:0' --reverse --no-info"
 
 # So bat shows content with the default terminal colors
 export BAT_THEME="base16"
@@ -177,4 +177,6 @@ export TERMINAL="alacritty"
 # Alias some helpers
 alias clip="xclip -selection clipboard"
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias prtsrcregion='/usr/bin/scrot -s  - | xclip -selection clipboard  -target image/png'
 
+export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
